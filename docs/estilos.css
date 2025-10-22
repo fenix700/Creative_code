@@ -1,0 +1,412 @@
+/*INICIO*/
+/* Efecto hover en botón */
+.btn {
+  transition: transform 0.3s ease;
+}
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* Efecto máquina de escribir */
+.eslogan {
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  width: 0;
+  animation: typing 3s steps(30, end) forwards, blink-caret .75s step-end infinite;
+}
+
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+/* Sección de inicio con fondo animado */
+#inicio {
+  background: linear-gradient(270deg, #024959, #f2c12e);
+  background-size: 400% 400%;
+  animation: bgAnimation 10s ease infinite;
+  color: white;
+  min-height: 100vh;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+@keyframes bgAnimation {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+/* Ajuste por navbar fija */
+body {
+  padding-top: 70px;
+}
+
+.logo-inicio {
+  display: block;
+  margin: 0 auto 20px auto; /* centra y agrega espacio abajo */
+  max-width: 300px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-inicio:hover {
+  transform: scale(1.05); /* animación al pasar el mouse */
+}
+
+ 
+
+
+/*REDES*/
+
+body {
+  padding-top: 70px;
+}
+
+.logo-inicio {
+  width: 300px !important;
+  max-width: 100%;
+  height: auto !important;
+}
+
+
+
+#contacto {
+  background: linear-gradient(270deg, #024959, #f2c12e);
+  background-size: 400% 400%;
+  animation: bgAnimation 10s ease infinite;
+  color: white;
+}
+
+@keyframes bgAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* Estilo para tarjetas más suaves */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Íconos de redes con animación */
+.redes-icono i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.redes-icono i:hover {
+  transform: scale(1.2) rotate(5deg);
+  color: #ffc107;
+}
+
+/* Estilo decorativo para título h2 */
+#contacto h2 {
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  border-bottom: 3px solid white;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Botón flotante para volver arriba */
+button.btn.position-fixed {
+  z-index: 999;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+}
+
+
+
+
+
+
+/*NOSOTROS*/
+/* Fondo personalizado para la sección */
+
+/* Contenedor general de tarjetas del equipo */
+#sobre-nosotros .row.text-center {
+  justify-content: center; /* centra las tarjetas si hay menos de 3 */
+  gap: 30px; /* espacio horizontal y vertical */
+  margin-bottom: 2rem;
+}
+
+/* Estilo de cada perfil usando clase alternativa */
+.perfil-card {
+  height: 100%;
+  background-color: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+.perfil-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Tarjetas uniformes y ordenadas */
+.card-hover {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  height: 100%;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Separación uniforme en todas las vistas */
+.card-hover:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/* Evita que las tarjetas colapsen en móviles */
+@media (max-width: 768px) {
+  .card-hover {
+    margin-bottom: 30px;
+  }
+}
+
+/* Imágenes del equipo */
+.rounded-circle {
+  border: 4px solid #dee2e6;
+}
+
+/* Estilo de los íconos de contacto */
+.contacto-icono i {
+  transition: transform 0.3s ease, color 0.3s ease;
+  margin-right: 4px;
+}
+.contacto-icono i:hover {
+  transform: scale(1.2) rotate(5deg);
+  color: #0dc143;
+}
+
+/* Botón "Leer más" */
+#resumen-historia button {
+  font-weight: bold;
+  text-decoration: none;
+}
+#resumen-historia button:hover {
+  text-decoration: underline;
+}
+
+/* Imagenes de perfil con tamaño uniforme y margen */
+.img-miembro {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border: 4px solid #dee2e6;
+  margin-bottom: 15px;
+}
+
+/* Justificar textos y separación más visible */
+#sobre-nosotros p {
+  text-align: justify;
+  margin-bottom: 1.5rem;
+}
+
+
+/* SERVICIOS */
+#portada-servicios {
+  background: linear-gradient(270deg, #024959, #f2c12e);
+  background-size: 400% 400%;
+  animation: bgAnimation 10s ease infinite;
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
+.servicio-card {
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.servicio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.servicio-icono {
+  color: #024959;
+  font-size: 2.5rem;
+}
+
+.precio {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #024959;
+  margin: 15px 0;
+}
+
+/* PROCESO */
+.proceso-paso {
+  padding: 30px 20px;
+  background-color: white;
+  border-radius: 15px;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.paso-numero {
+  width: 50px;
+  height: 50px;
+  background-color: #f2c12e;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto 20px auto;
+}
+
+/* TESTIMONIOS */
+#portada-testimonios {
+  background: linear-gradient(270deg, #024959, #f2c12e);
+  background-size: 400% 400%;
+  animation: bgAnimation 10s ease infinite;
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
+.testimonio-card {
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.testimonio-card:hover {
+  transform: translateY(-5px);
+}
+
+.estrellas {
+  font-size: 0.9rem;
+}
+
+.caso-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.caso-card:hover {
+  transform: translateY(-5px);
+}
+
+/* CTA */
+#cta-testimonios {
+  padding: 60px 0;
+}
+
+/* PORTAFOLIO */
+  .zoom {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .zoom:hover {
+    transform: scale(1.07);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+.carousel-item {
+  border-radius: 10px;
+  background-color: #024959;  
+}
+
+.otros-proyectos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.proyecto {
+  width: 100%;
+  max-width: 300px;
+  min-width: 250px;
+  flex-grow: 1;
+  border: 1px solid #c0baba;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.proyecto:hover {
+  transform: scale(1.05);
+}
+
+.proyecto img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* BLOG */
+
+article {
+  width: 90%;
+  margin: 10px;
+}
+
+#noticias img {
+  max-height: 400px;
+  object-fit: cover;
+}
+
+#blog textarea,
+#blog input {
+  border-radius: 10px;
+}
+
+/* Tarjetas del blog */
+#muroPublicaciones .card {
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+#muroPublicaciones .card:hover {
+  transform: scale(1.02);
+}
+
+#muroPublicaciones img {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  height: 180px;
+  object-fit: cover;
+}
+
+

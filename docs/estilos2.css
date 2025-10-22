@@ -1,0 +1,140 @@
+body {
+  background: linear-gradient(270deg, #024959, #f2c12e);
+  animation: bgAnimation 10s ease infinite;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Tarjetas con fondo blanco semi-transparente para contraste */
+.card {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #212529; /* texto oscuro para legibilidad */
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover para efecto sutil en la tarjeta */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Titulos centrados con fuente fuerte */
+h3 {
+  font-weight: 700;
+  color: #1e3c72; /* azul oscuro que combine */
+  margin-bottom: 1.5rem;
+}
+
+/* Labels con fuente y tamaño legible */
+label.form-label {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Inputs con borde azul claro, foco destacado */
+.form-control {
+  border: 2px solid #a8c0ff;
+  border-radius: 0.5rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #1e3c72;
+  box-shadow: 0 0 5px rgba(30, 60, 114, 0.7);
+  outline: none;
+}
+
+/* Select igual que input */
+.form-select {
+  border: 2px solid #a8c0ff;
+  border-radius: 0.5rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-select:focus {
+  border-color: #1e3c72;
+  box-shadow: 0 0 5px rgba(30, 60, 114, 0.7);
+  outline: none;
+}
+
+/* Botones personalizados */
+.btn-primary {
+  background-color: #1e3c72;
+  border: none;
+  font-weight: 700;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #14335a;
+}
+
+/* Mensajes validación */
+.text-danger {
+  font-weight: 600;
+  color: #d9534f !important;
+}
+
+.text-success {
+  font-weight: 600;
+  color: #28a745 !important;
+  font-size: 1.1rem;
+}
+
+/* Checkbox con etiqueta más grande */
+.form-check-label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Botón volver arriba personalizado */
+.btn-primary.position-fixed {
+  background-color: #1e3c72;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary.position-fixed:hover {
+  background-color: #14335a;
+}
+
+/* Footer fondo oscuro semi-transparente */
+footer.bg-dark {
+  background-color: rgba(30, 60, 114, 0.95) !important;
+  color: #e9ecef;
+  font-size: 0.9rem;
+}
+
+/* Enlaces del footer */
+footer a.text-white {
+  transition: color 0.3s ease;
+}
+
+footer a.text-white:hover {
+  color: #a8c0ff;
+}
+
+/* Ajustes para espacios en dispositivos pequeños */
+@media (max-width: 576px) {
+  .card {
+    padding: 1.5rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+}
